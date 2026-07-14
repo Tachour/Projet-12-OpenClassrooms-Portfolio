@@ -7,14 +7,12 @@ function Hero() {
       <div className="hero__content">
         <p className="hero__intro">Bonjour, je suis</p>
 
-        <h1 className="hero__title">
-          Tarek <span>Achour</span>
-        </h1>
+        <h1 className="hero__title">Tarek Achour</h1>
 
         <h2 className="hero__job">Développeur web</h2>
 
         <p className="hero__description">
-          Je conçois des sites web modernes, responsives et accessibles avec
+          Je développe des sites web modernes, responsives et accessibles avec
           React, JavaScript, HTML et CSS.
         </p>
 

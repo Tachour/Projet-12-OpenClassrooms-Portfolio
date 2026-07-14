@@ -2,10 +2,8 @@
   display: inline-block;
   padding: 14px 26px;
   border-radius: 10px;
-
   font-weight: 600;
   text-decoration: none;
-
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -13,17 +11,13 @@
 }
 
 .button:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .button--primary {
   background-color: #3b82f6;
   color: white;
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
-}
-
-.button--primary:hover {
-  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
 }
 
 .button--secondary {
