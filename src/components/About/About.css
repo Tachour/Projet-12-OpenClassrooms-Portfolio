@@ -1,4 +1,49 @@
-section {
-  min-height: 100vh;
-  padding: 120px 8% 60px;
+.about {
+  padding: 120px 8%;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about__text p {
+  margin-bottom: 20px;
+
+  color: #94a3b8;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about__card {
+  padding: 30px;
+  border: 1px solid #334155;
+  border-radius: 16px;
+
+  background: #1e293b;
+}
+
+.about__card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: #f8fafc;
+}
+
+.about__card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about__card li {
+  margin-bottom: 15px;
+
+  color: #cbd5e1;
 }
