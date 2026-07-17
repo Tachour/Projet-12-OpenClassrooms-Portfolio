@@ -1,5 +1,5 @@
 .about {
-  padding: 120px 8%;
+  padding: 80px 8%;
 }
 
 .about__content {
@@ -46,4 +46,15 @@
   margin-bottom: 15px;
 
   color: #cbd5e1;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 60px 20px;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }

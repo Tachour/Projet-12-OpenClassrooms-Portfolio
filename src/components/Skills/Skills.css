@@ -1,5 +1,5 @@
 .skills {
-  padding: 120px 8%;
+  padding: 80px 8%;
 }
 
 .skills__grid {
@@ -12,6 +12,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .skills {
+    padding: 60px 20px;
+  }
+
   .skills__grid {
     grid-template-columns: 1fr;
   }

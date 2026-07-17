@@ -1,12 +1,12 @@
 .projects {
-  padding: 100px 8%;
+  padding: 80px 8%;
 }
 
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 /* Chaque carte occupe 2 colonnes sur 6 */
@@ -39,8 +39,8 @@
 /* Mobile : 1 carte par ligne */
 @media screen and (max-width: 500px) {
   .projects {
-    padding: 80px 20px;
-  }
+  padding: 60px 20px;
+}
 
   .projects__grid {
     grid-template-columns: 1fr;

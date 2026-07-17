@@ -128,6 +128,10 @@
   object-position: center 8%;
 }
 
+.project-card--mon-vieux-grimoire .project-card__image img {
+  object-position: center 100%;
+}
+
 @media screen and (max-width: 500px) {
   .project-card__links {
     flex-direction: column;

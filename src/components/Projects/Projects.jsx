@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Sophie Bluel",
     className: "project-card--sophie-bluel",
-    image: "/images/Booki.webp",
+    image: "/images/sophie-bluel.webp",
     description:
       "Développement d'une galerie dynamique avec JavaScript, authentification et communication avec une API.",
     technologies: ["HTML", "CSS", "JavaScript", "API"],
@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Kasa",
     className: "project-card--kasa",
-    image: "/images/Booki.webp",
+    image: "/images/Kasa.webp",
     description:
       "Application de location immobilière développée avec React et React Router.",
     technologies: ["React", "JavaScript", "CSS"],
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Mon Vieux Grimoire",
     className: "project-card--mon-vieux-grimoire",
-    image: "/images/Booki.webp",
+    image: "/images/grimoire.webp",
     description:
       "Création d'une API sécurisée avec Node.js, Express et MongoDB pour la gestion de livres.",
     technologies: ["Node.js", "Express", "MongoDB"],
