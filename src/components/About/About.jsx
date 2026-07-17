@@ -36,7 +36,7 @@ function About() {
             <li><strong>Nom :</strong> Tarek Achour</li>
             <li><strong>Formation :</strong> Développeur Web</li>
             <li><strong>Localisation :</strong> France</li>
-            <li><strong>Disponibilité :</strong> À définir</li>
+            <li><strong>Disponibilité :</strong> Immédiate</li>
           </ul>
         </div>
       </div>

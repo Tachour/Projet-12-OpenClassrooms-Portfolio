@@ -21,7 +21,7 @@ const projects = [
       "Développement d'une galerie dynamique avec JavaScript, authentification et communication avec une API.",
     technologies: ["HTML", "CSS", "JavaScript", "API"],
     github: "https://github.com/Tachour/Projet3-Sophie-Bluel",
-    demo: "",
+    demo: "https://bluels-j1z41ek3v-achours-projects-41e6f9a5.vercel.app/",
   },
   {
     title: "Nina Carducci",
@@ -31,7 +31,7 @@ const projects = [
       "Optimisation des performances, de l'accessibilité et du référencement SEO d'un site existant.",
     technologies: ["HTML", "CSS", "JavaScript", "SEO"],
     github: "https://github.com/Tachour/Projet4-Nina-Carducci-Dev.git",
-    demo: "",
+    demo: "https://tachour.github.io/Projet4-Nina-Carducci-Dev/",
   },
   {
     title: "Kasa",
@@ -41,7 +41,7 @@ const projects = [
       "Application de location immobilière développée avec React et React Router.",
     technologies: ["React", "JavaScript", "CSS"],
     github: "https://github.com/Tachour/Projet5-Kasa",
-    demo: "",
+    demo: "https://kasa-five-orcin.vercel.app/",
   },
   {
     title: "Mon Vieux Grimoire",
@@ -60,8 +60,11 @@ function Projects() {
     <section className="projects" id="projects">
       <SectionTitle
         subtitle="Projets"
-        title="Quelques réalisations"
+        title="Quelques réalisations"        
       />
+      <p className="projects__note">
+        Toujours en apprentissage, je continue à me former, les tests automatisés et l'accessibilité pour rendre mes prochains projets encore plus robustes.
+      </p>
 
       <div className="projects__grid">
         {projects.map((project) => (

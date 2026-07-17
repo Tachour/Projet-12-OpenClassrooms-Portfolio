@@ -6,6 +6,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaLocationDot,
+
 } from "react-icons/fa6";
 
 function Contact() {
@@ -28,15 +29,17 @@ function Contact() {
           <div className="contact__details">
             <a
               className="contact__detail"
-              href="mailto:ton-email@example.com"
+              href="mailto:tarek-achour@outlook.fr"
             >
               <FaEnvelope />
-              <span>ton-email@example.com</span>
+              <span>tarek-achour@outlook.fr</span>
             </a>
 
             <div className="contact__detail">
               <FaLocationDot />
-              <span>France</span>
+              <a href="https://www.google.com/maps/place/France" target="_blank" rel="noreferrer" aria-label="Voir la localisation de la France">
+                <span>France</span>
+              </a>
             </div>
           </div>
 

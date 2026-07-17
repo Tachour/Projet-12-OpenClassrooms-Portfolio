@@ -1,5 +1,8 @@
 .projects {
   padding: 80px 8%;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)),
+    url("/images/hero-bg.webp") no-repeat center center/cover;
 }
 
 .projects__grid {
@@ -45,4 +48,13 @@
   .projects__grid {
     grid-template-columns: 1fr;
   }
+}
+
+.projects__note {
+  max-width: 700px;
+  margin: 40px auto 0;
+  text-align: center;
+  color: #ffffff;
+  font-style: italic;
+  line-height: 1.7;
 }
