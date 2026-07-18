@@ -1,3 +1,4 @@
+import { cloneElement } from "react";
 import "./CardSkills.css";
 
 function CardSkills({ title, skills }) {
@@ -8,7 +9,10 @@ function CardSkills({ title, skills }) {
       <ul>
         {skills.map((skill) => (
           <li key={skill.label}>
-            {skill.icon}
+            {cloneElement(skill.icon, {
+              "aria-hidden": true,
+              focusable: false,
+            })}
             {skill.label}
           </li>
         ))}
