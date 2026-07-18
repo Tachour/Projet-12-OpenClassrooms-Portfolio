@@ -1,7 +1,8 @@
+
 import "./CardProject.css";
 
 function CardProject({
-  className,
+  className = "",
   title,
   image,
   description,
@@ -12,7 +13,13 @@ function CardProject({
   return (
     <article className={`project-card ${className}`}>
       <div className="project-card__image">
-        <img src={image} alt={`Capture d'écran du projet ${title}`} />
+        <img
+          src={image}
+          alt={`Capture d'écran du projet ${title}`}
+          loading="lazy"
+          width="600"
+          height="350"
+        />
       </div>
 
       <div className="project-card__content">
@@ -31,6 +38,7 @@ function CardProject({
             href={github}
             target="_blank"
             rel="noreferrer"
+            aria-label={`Voir le code GitHub du projet ${title}`}
           >
             GitHub
           </a>
@@ -40,6 +48,7 @@ function CardProject({
               href={demo}
               target="_blank"
               rel="noreferrer"
+              aria-label={`Voir la démonstration du projet ${title}`}
             >
               Voir le projet
             </a>

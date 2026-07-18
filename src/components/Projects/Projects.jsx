@@ -51,7 +51,7 @@ const projects = [
       "Création d'une API sécurisée avec Node.js, Express et MongoDB pour la gestion de livres.",
     technologies: ["Node.js", "Express", "MongoDB"],
     github: "https://github.com/Tachour/Projet6-Mon-Vieux-Grimoire",
-    demo: "",
+    demo: "https://projet6-mon-vieux-grimoire.vercel.app",
   },
 ];
 
