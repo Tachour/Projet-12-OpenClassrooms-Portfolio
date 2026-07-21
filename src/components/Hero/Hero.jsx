@@ -12,22 +12,24 @@ function Hero() {
         <h2 className="hero__job">Développeur web</h2>
 
         <p className="hero__description">
-          Je développe des sites web modernes, responsives et accessibles avec
-          React, JavaScript, HTML et CSS.
+            Je développe des applications web modernes, responsives et accessibles avec
+            la stack MERN (MongoDB, Express, React et Node.js).
         </p>
 
         <div className="hero__buttons">
           <Button
-            text="Voir mes projets"
             href="#projects"
             variant="primary"
-          />
+          >
+            Voir mes projets
+          </Button>
 
           <Button
-            text="Me contacter"
             href="#contact"
             variant="secondary"
-          />
+          >
+            Me contacter
+          </Button>
         </div>
       </div>
     </section>

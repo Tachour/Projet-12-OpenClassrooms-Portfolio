@@ -1,8 +1,5 @@
 .projects {
   padding: 80px 8%;
-  background:
-    linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)),
-    url("/images/hero-bg.webp") no-repeat center center/cover;
 }
 
 .projects__grid {
@@ -12,12 +9,10 @@
   margin-top: 40px;
 }
 
-/* Chaque carte occupe 2 colonnes sur 6 */
 .projects__grid > * {
   grid-column: span 2;
 }
 
-/* Centre les 2 cartes de la deuxième ligne */
 .projects__grid > *:nth-child(4) {
   grid-column: 2 / span 2;
 }
@@ -26,35 +21,31 @@
   grid-column: 4 / span 2;
 }
 
-/* Tablette : 2 cartes par ligne */
-@media screen and (max-width: 1000px) {
+.projects__note {
+  max-width: 700px;
+  margin: 40px auto 0;
+  color: #ffffff;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 1400px) {
   .projects__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .projects__grid > *,
   .projects__grid > *:nth-child(4),
   .projects__grid > *:nth-child(5) {
-    grid-column: auto;
+    grid-column: 1 / -1;
+    width: 100%;
   }
 }
 
-/* Mobile : 1 carte par ligne */
 @media screen and (max-width: 500px) {
   .projects {
-  padding: 60px 20px;
-}
-
-  .projects__grid {
-    grid-template-columns: 1fr;
+    padding: 60px 20px;
   }
-}
-
-.projects__note {
-  max-width: 700px;
-  margin: 40px auto 0;
-  text-align: center;
-  color: #ffffff;
-  font-style: italic;
-  line-height: 1.7;
 }

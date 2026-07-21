@@ -1,12 +1,12 @@
 import "./Contact.css";
 import SectionTitle from "../ui/SectionTitle/SectionTitle";
+import Button from "../ui/Button/Button";
 
 import {
   FaEnvelope,
   FaGithub,
   FaLinkedin,
   FaLocationDot,
-
 } from "react-icons/fa6";
 
 function Contact() {
@@ -31,38 +31,46 @@ function Contact() {
               className="contact__detail"
               href="mailto:tarek-achour@outlook.fr"
             >
-              <FaEnvelope />
+              <FaEnvelope aria-hidden="true" focusable="false" />
               <span>tarek-achour@outlook.fr</span>
             </a>
 
             <div className="contact__detail">
-              <FaLocationDot />
-              <a href="https://www.google.com/maps/place/France" target="_blank" rel="noreferrer" aria-label="Voir la localisation de la France">
+              <FaLocationDot aria-hidden="true" focusable="false" />
+
+              <a
+                href="https://www.google.com/maps/place/France"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Voir la localisation de la France"
+              >
                 <span>France</span>
               </a>
             </div>
           </div>
 
           <div className="contact__socials">
-            <a
+            <Button
               href="https://github.com/Tachour"
+              variant="secondary"
               target="_blank"
               rel="noreferrer"
-              aria-label="Accéder à mon profil GitHub"
+              ariaLabel="Accéder à mon profil GitHub"
             >
-              <FaGithub />
-              GitHub
-            </a>
+              <FaGithub aria-hidden="true" focusable="false" />
+              <span>GitHub</span>
+            </Button>
 
-            <a
+            <Button
               href="https://www.linkedin.com/in/tarek-achour-660798155"
+              variant="secondary"
               target="_blank"
               rel="noreferrer"
-              aria-label="Accéder à mon profil LinkedIn"
+              ariaLabel="Accéder à mon profil LinkedIn"
             >
-              <FaLinkedin />
-              LinkedIn
-            </a>
+              <FaLinkedin aria-hidden="true" focusable="false" />
+              <span>LinkedIn</span>
+            </Button>
           </div>
         </div>
 
@@ -75,6 +83,7 @@ function Contact() {
               id="name"
               name="name"
               placeholder="Votre nom"
+              autoComplete="name"
               required
             />
           </div>
@@ -87,6 +96,7 @@ function Contact() {
               id="email"
               name="email"
               placeholder="votre@email.com"
+              autoComplete="email"
               required
             />
           </div>
@@ -103,7 +113,12 @@ function Contact() {
             />
           </div>
 
-          <button type="submit">Envoyer le message</button>
+          <Button
+            type="submit"
+            variant="primary"
+          >
+            Envoyer le message
+          </Button>
         </form>
       </div>
     </section>

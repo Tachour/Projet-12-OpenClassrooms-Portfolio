@@ -18,14 +18,16 @@ function About() {
           </p>
 
           <p>
-            J'apprécie particulièrement le développement d'interfaces modernes,
-            responsives et accessibles avec React, JavaScript, HTML et CSS.
+              J’apprécie particulièrement la création d’applications web modernes,
+              responsives et accessibles, aussi bien côté front-end avec React,
+              JavaScript, HTML et CSS que côté back-end avec Node.js, Express et
+              MongoDB.
           </p>
 
           <p>
-            Mon objectif est d'intégrer une entreprise où je pourrai continuer
-            à apprendre, relever de nouveaux défis et participer à des projets
-            concrets.
+              Mon objectif est d’intégrer une entreprise où je pourrai continuer à
+              apprendre, relever de nouveaux défis et participer à des projets web
+              complets et concrets.
           </p>
         </div>
 

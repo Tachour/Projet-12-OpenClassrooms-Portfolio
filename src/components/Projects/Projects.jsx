@@ -8,7 +8,7 @@ const projects = [
     className: "project-card--booki",
     image: "/images/Booki.webp",
     description:
-      "Intégration d'une page d'accueil responsive pour une agence de voyage à partir d'une maquette.",
+      "Projet de formation visant à intégrer une maquette responsive d’une agence de voyage. L’enjeu était de respecter fidèlement le design avec HTML et CSS. Le résultat est un site responsive et accessible, avec des optimisations possibles sur les performances.",
     technologies: ["HTML", "CSS"],
     github: "https://github.com/Tachour/Projet2-Booki",
     demo: "https://tachour.github.io/Projet2-Booki/",
@@ -18,7 +18,7 @@ const projects = [
     className: "project-card--sophie-bluel",
     image: "/images/sophie-bluel.webp",
     description:
-      "Développement d'une galerie dynamique avec JavaScript, authentification et communication avec une API.",
+      "Projet de formation consistant à développer une galerie connectée à une API. L’enjeu était de permettre à un administrateur de gérer les réalisations de manière sécurisée. J’ai développé l’authentification, les filtres et la gestion des projets en JavaScript.",
     technologies: ["HTML", "CSS", "JavaScript", "API"],
     github: "https://github.com/Tachour/Projet3-Sophie-Bluel",
     demo: "https://bluels-j1z41ek3v-achours-projects-41e6f9a5.vercel.app/",
@@ -28,7 +28,7 @@ const projects = [
     className: "project-card--nina-carducci",
     image: "/images/nina.webp",
     description:
-      "Optimisation des performances, de l'accessibilité et du référencement SEO d'un site existant.",
+      "Projet d’optimisation d’un site existant. L’enjeu était d’améliorer les performances, l’accessibilité et le référencement. J’ai optimisé les images, le SEO et la structure du site afin d’obtenir de meilleurs résultats Lighthouse.",
     technologies: ["HTML", "CSS", "JavaScript", "SEO"],
     github: "https://github.com/Tachour/Projet4-Nina-Carducci-Dev.git",
     demo: "https://tachour.github.io/Projet4-Nina-Carducci-Dev/",
@@ -38,7 +38,7 @@ const projects = [
     className: "project-card--kasa",
     image: "/images/Kasa.webp",
     description:
-      "Application de location immobilière développée avec React et React Router.",
+      "Projet de formation réalisé avec React. L’enjeu était de créer une application moderne, responsive et basée sur des composants réutilisables. J’ai développé la navigation, les pages dynamiques et l’interface utilisateur.",
     technologies: ["React", "JavaScript", "CSS"],
     github: "https://github.com/Tachour/Projet5-Kasa",
     demo: "https://kasa-five-orcin.vercel.app/",
@@ -48,7 +48,7 @@ const projects = [
     className: "project-card--mon-vieux-grimoire",
     image: "/images/grimoire.webp",
     description:
-      "Création d'une API sécurisée avec Node.js, Express et MongoDB pour la gestion de livres.",
+      "Projet back-end consistant à développer une API sécurisée avec Node.js, Express et MongoDB. L’enjeu était de gérer les livres, les images et les utilisateurs de manière fiable. J’ai mis en place l’authentification JWT, le CRUD et le système de notation.",
     technologies: ["Node.js", "Express", "MongoDB"],
     github: "https://github.com/Tachour/Projet6-Mon-Vieux-Grimoire",
     demo: "https://projet6-mon-vieux-grimoire.vercel.app",
