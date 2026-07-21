@@ -1,4 +1,5 @@
 import "./Contact.css";
+import { useForm, ValidationError } from "@formspree/react";
 import SectionTitle from "../ui/SectionTitle/SectionTitle";
 import Button from "../ui/Button/Button";
 
@@ -10,6 +11,8 @@ import {
 } from "react-icons/fa6";
 
 function Contact() {
+  const [state, handleSubmit] = useForm("mvzeqwjn");
+
   return (
     <section className="contact" id="contact">
       <SectionTitle
@@ -44,7 +47,7 @@ function Contact() {
                 rel="noreferrer"
                 aria-label="Voir la localisation de la France"
               >
-                <span>France</span>
+                France
               </a>
             </div>
           </div>
@@ -74,51 +77,97 @@ function Contact() {
           </div>
         </div>
 
-        <form className="contact__form">
-          <div className="contact__field">
-            <label htmlFor="name">Nom</label>
+        <form
+          className="contact__form"
+          onSubmit={handleSubmit}
+        >
+          <h3 id="contact-form-title">Envoyez-moi un message</h3>
 
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Votre nom"
-              autoComplete="name"
-              required
-            />
-          </div>
+          {state.succeeded ? (
+            <p
+              className="contact__success"
+              role="status"
+            >
+              Votre message a bien été envoyé. Merci, je vous répondrai dès que
+              possible.
+            </p>
+          ) : (
+            <>
+              <div className="contact__field">
+                <label htmlFor="name">Nom</label>
 
-          <div className="contact__field">
-            <label htmlFor="email">Adresse e-mail</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Votre nom"
+                  autoComplete="name"
+                  required
+                />
 
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="votre@email.com"
-              autoComplete="email"
-              required
-            />
-          </div>
+                <ValidationError
+                  className="contact__error"
+                  prefix="Nom"
+                  field="name"
+                  errors={state.errors}
+                />
+              </div>
 
-          <div className="contact__field">
-            <label htmlFor="message">Message</label>
+              <div className="contact__field">
+                <label htmlFor="email">Adresse e-mail</label>
 
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              placeholder="Écrivez votre message..."
-              required
-            />
-          </div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="votre@email.com"
+                  autoComplete="email"
+                  required
+                />
 
-          <Button
-            type="submit"
-            variant="primary"
-          >
-            Envoyer le message
-          </Button>
+                <ValidationError
+                  className="contact__error"
+                  prefix="Adresse e-mail"
+                  field="email"
+                  errors={state.errors}
+                />
+              </div>
+
+              <div className="contact__field">
+                <label htmlFor="message">Message</label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Écrivez votre message..."
+                  required
+                />
+
+                <ValidationError
+                  className="contact__error"
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+              </div>
+
+              <ValidationError
+                className="contact__error contact__error--general"
+                errors={state.errors}
+              />
+
+              <Button
+                type="submit"
+                variant="primary"
+                disabled={state.submitting}
+              >
+                {state.submitting
+                  ? "Envoi en cours..."
+                  : "Envoyer le message"}
+              </Button>
+            </>
+          )}
         </form>
       </div>
     </section>
