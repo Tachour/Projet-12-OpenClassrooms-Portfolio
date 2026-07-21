@@ -35,12 +35,13 @@
 
 .button--secondary {
   color: #f8fafc;
-  border-color: #334155;
-  background-color: rgba(30, 41, 59, 0.5);
+  background-color: #1e293b;
+  border: 1px solid #64748b;
 }
 
 .button--secondary:hover {
-  background-color: #1e293b;
+  background-color: #334155;
+  border-color: #94a3b8;
 }
 
 @media screen and (min-width: 769px) {
