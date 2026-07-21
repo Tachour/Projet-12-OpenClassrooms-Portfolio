@@ -30,6 +30,8 @@
 }
 
 .header__list a {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,6 +45,11 @@
 }
 
 .header__list a:hover {
-  color: #3b82f6;
+  color: #1d4ed8;
   transform: translateY(-3px) scale(1.15);
+}
+
+.header__list a.header__link--active {
+  color: #1d4ed8;
+  transform: scale(1.15);
 }
