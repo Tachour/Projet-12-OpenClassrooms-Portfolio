@@ -55,7 +55,7 @@ function Contact() {
           <div className="contact__socials">
             <Button
               href="https://github.com/Tachour"
-              variant="secondary"
+              variant="primary"
               target="_blank"
               rel="noreferrer"
               ariaLabel="Accéder à mon profil GitHub"
@@ -66,7 +66,7 @@ function Contact() {
 
             <Button
               href="https://www.linkedin.com/in/tarek-achour-660798155"
-              variant="secondary"
+              variant="primary"
               target="_blank"
               rel="noreferrer"
               ariaLabel="Accéder à mon profil LinkedIn"
@@ -159,7 +159,7 @@ function Contact() {
 
               <Button
                 type="submit"
-                variant="primary"
+                variant="secondary"
                 disabled={state.submitting}
               >
                 {state.submitting

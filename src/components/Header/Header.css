@@ -44,9 +44,12 @@
     transform 0.3s ease;
 }
 
-.header__list a:hover {
-  color: #1d4ed8;
-  transform: translateY(-3px) scale(1.15);
+/* Hover uniquement sur les appareils avec une souris */
+@media (hover: hover) and (pointer: fine) {
+  .header__list a:hover {
+    color: #1d4ed8;
+    transform: translateY(-3px) scale(1.15);
+  }
 }
 
 .header__list a.header__link--active {

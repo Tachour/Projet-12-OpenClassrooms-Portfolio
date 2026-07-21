@@ -9,45 +9,72 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 
+const sectionIds = [
+  "home",
+  "about",
+  "skills",
+  "projects",
+  "contact",
+];
+
 function Header() {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const sections = document.querySelectorAll(
-      "#home, #about, #skills, #projects, #contact"
-    );
+    const updateActiveSection = () => {
+      const screenMiddle = window.scrollY + window.innerHeight / 2;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries.find(
-          (entry) => entry.isIntersecting
-        );
+      let currentSection = "home";
 
-        if (visibleSection) {
-          setActiveSection(visibleSection.target.id);
+      sectionIds.forEach((sectionId) => {
+        const section = document.getElementById(sectionId);
+
+        if (!section) {
+          return;
         }
-      },
-      {
-        root: null,
-        rootMargin: "-35% 0px -55% 0px",
-        threshold: 0,
-      }
-    );
 
-    sections.forEach((section) => {
-      observer.observe(section);
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (
+          screenMiddle >= sectionTop &&
+          screenMiddle < sectionBottom
+        ) {
+          currentSection = sectionId;
+        }
+      });
+
+      const isAtBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 5;
+
+      if (isAtBottom) {
+        currentSection = "contact";
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    updateActiveSection();
+
+    window.addEventListener("scroll", updateActiveSection, {
+      passive: true,
     });
 
+    window.addEventListener("resize", updateActiveSection);
+
     return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
     };
   }, []);
 
   return (
     <header className="header">
-      <nav className="header__nav" aria-label="Navigation principale">
+      <nav
+        className="header__nav"
+        aria-label="Navigation principale"
+      >
         <ul className="header__list">
           <li>
             <a
@@ -58,7 +85,9 @@ function Header() {
                 activeSection === "home" ? "location" : undefined
               }
               className={
-                activeSection === "home" ? "header__link--active" : ""
+                activeSection === "home"
+                  ? "header__link--active"
+                  : ""
               }
             >
               <FaHouse aria-hidden="true" focusable="false" />
@@ -74,7 +103,9 @@ function Header() {
                 activeSection === "about" ? "location" : undefined
               }
               className={
-                activeSection === "about" ? "header__link--active" : ""
+                activeSection === "about"
+                  ? "header__link--active"
+                  : ""
               }
             >
               <FaUser aria-hidden="true" focusable="false" />
@@ -90,7 +121,9 @@ function Header() {
                 activeSection === "skills" ? "location" : undefined
               }
               className={
-                activeSection === "skills" ? "header__link--active" : ""
+                activeSection === "skills"
+                  ? "header__link--active"
+                  : ""
               }
             >
               <FaCode aria-hidden="true" focusable="false" />
@@ -103,7 +136,9 @@ function Header() {
               title="Projets"
               aria-label="Projets"
               aria-current={
-                activeSection === "projects" ? "location" : undefined
+                activeSection === "projects"
+                  ? "location"
+                  : undefined
               }
               className={
                 activeSection === "projects"
@@ -111,7 +146,10 @@ function Header() {
                   : ""
               }
             >
-              <FaFolderOpen aria-hidden="true" focusable="false" />
+              <FaFolderOpen
+                aria-hidden="true"
+                focusable="false"
+              />
             </a>
           </li>
 
@@ -121,13 +159,20 @@ function Header() {
               title="Contact"
               aria-label="Contact"
               aria-current={
-                activeSection === "contact" ? "location" : undefined
+                activeSection === "contact"
+                  ? "location"
+                  : undefined
               }
               className={
-                activeSection === "contact" ? "header__link--active" : ""
+                activeSection === "contact"
+                  ? "header__link--active"
+                  : ""
               }
             >
-              <FaEnvelope aria-hidden="true" focusable="false" />
+              <FaEnvelope
+                aria-hidden="true"
+                focusable="false"
+              />
             </a>
           </li>
         </ul>
