@@ -8,6 +8,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaLocationDot,
+  FaPhone,
 } from "react-icons/fa6";
 
 function Contact() {
@@ -36,6 +37,15 @@ function Contact() {
             >
               <FaEnvelope aria-hidden="true" focusable="false" />
               <span>tarek-achour@outlook.fr</span>
+            </a>
+
+            <a
+              className="contact__detail"
+              href="tel:+33612345678"
+              aria-label="Appeler le 07 82 08 04 27"
+            >
+              <FaPhone aria-hidden="true" focusable="false" />
+              <span>07 82 08 04 27</span>
             </a>
 
             <div className="contact__detail">
