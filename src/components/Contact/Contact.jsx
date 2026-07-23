@@ -41,11 +41,11 @@ function Contact() {
 
             <a
               className="contact__detail"
-              href="tel:+33612345678"
-              aria-label="Appeler le 07 82 08 04 27"
+              href="tel:+33782080427"
+              aria-label="Appeler le (+33) 7 82 08 04 27"
             >
               <FaPhone aria-hidden="true" focusable="false" />
-              <span>07 82 08 04 27</span>
+              <span>(+33) 7 82 08 04 27</span>
             </a>
 
             <div className="contact__detail">
